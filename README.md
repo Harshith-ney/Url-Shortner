@@ -1,66 +1,86 @@
 # ⚡ URL Shortener with Analytics
 
-A full-stack URL shortener built using **Node.js**, **Express**, **MongoDB**, **Redis**, and **React**, with click analytics, expiration handling, and JWT-based authentication.
+A full-stack URL shortener built using **Node.js**, **Express**, **MongoDB**, **Redis**, and **React**, featuring click tracking, expiration logic, and sleek data visualization with Chart.js.
 
 ---
 
 ## 🔗 Features
 
-- 🔐 JWT Auth (optional for shortening)
+- 🔐 JWT-based authentication (optional)
 - ✂️ Shorten long URLs with unique slugs
-- 🧠 Smart caching with Redis
-- 📈 Click analytics and charts
-- 🕐 URL expiration support
-- 🌐 React-based frontend
+- 🧠 Redis caching for blazing fast redirects
+- 📈 Click logging with timestamps, IP, and user-agent
+- 📊 Cumulative click analytics displayed via chart
+- ⏳ URL expiration support
+- 🖥️ React-based frontend
 
 ---
 
 ## 🛠️ Tech Stack
 
 **Backend:**
-- Node.js, Express
+- Node.js
+- Express.js
 - MongoDB (Mongoose)
 - Redis
-- JWT for Auth
+- JWT
 
 **Frontend:**
-- React
-- Chart.js (Analytics)
+- React.js
+- Chart.js
 - Axios
 
 ---
 
 ## 🚀 Getting Started
 
-### Clone the repo
+### 🔁 Clone the repository
 
 ```bash
 git clone https://github.com/your-username/url-shortner.git
 cd url-shortner
 
-
-1. **Backend Setup**
+🧩 Backend Setup
 cd backend
 npm install
 
-**Create a .env file:**
+
+Create a .env file inside /backend:
+
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/urlshortner
 JWT_SECRET=your_secret_key
 
-Run Backend:
+Run the backend server:
 npm start
 
-2. Frontend Setup
+💻 Frontend Setup
+
 cd frontend
 npm install
 npm start
 
-
 📊 Analytics
-	•	Each click is logged with timestamp, IP, and user-agent.
-	•	Cumulative click data shown on a chart.
+	•	Every redirect logs:
+	•	Timestamp
+	•	User IP
+	•	User-Agent string
+	•	Chart visualizes cumulative clicks over time using Chart.js
 
+
+
+
+url-shortner/
+├── backend/
+│   ├── controller/
+│   ├── models/
+│   ├── routes/
+│   └── index.js
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   └── App.js
+└── README.md
 
 
 
